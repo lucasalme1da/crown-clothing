@@ -18,6 +18,7 @@ class SignIn extends React.Component {
 
   handleChange = event => {
     const { value, name } = event.target;
+
     this.setState({
       [name]: value
     })
@@ -56,7 +57,10 @@ class SignIn extends React.Component {
 
           <div className="buttons">
             <CustomButton type="Submit">Sign in</CustomButton>
-            <CustomButton onClick={signInWithGoogle} isGoogleSignIn>
+            <CustomButton onClick={(e) => {
+              e.preventDefault();
+              signInWithGoogle();
+            }} isGoogleSignIn>
               Sign in with Google
           </CustomButton>
           </div>
