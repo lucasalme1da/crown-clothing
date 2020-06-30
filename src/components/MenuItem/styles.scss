@@ -26,7 +26,9 @@
 
     & .backgroundImage {
       transform: scale(1.1);
-      transition: transform 6s cubic-bezier(0.25,0.45,0.45,0.95);
+      filter: blur(3px);
+      -webkit-filter: blur(3px);
+      transition: 5s cubic-bezier(0.25,0.45,0.45,0.95);
     }
 
     & .content {

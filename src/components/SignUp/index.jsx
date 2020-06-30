@@ -51,7 +51,7 @@ class SignUp extends React.Component {
       <div className="signUp">
         <h2>I don't have an account</h2>
         <span>Sign up with your email and password</span>
-        <form className="signUpForm" onSubmit={this.handleSubmit}>
+        <form autoComplete="off" className="signUpForm" onSubmit={this.handleSubmit}>
           <FormInput
             type="text"
             name="displayName"
