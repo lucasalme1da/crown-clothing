@@ -11,17 +11,28 @@
   right: 40px;
   z-index: 5;
   
-
   .cartItems {
     height: 240px;
     display: flex;
     flex-direction: column;
-    overflow: scroll;
-    overflow-y: hidden;
     overflow-x: hidden;
+
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+    
+    ::-webkit-scrollbar-track {
+      background: #fff;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+      background: rgb(71, 71, 71);
+    }
+    
   }
 
   button {
     margin-top: auto;
   }
+
 }
