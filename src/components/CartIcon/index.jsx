@@ -9,7 +9,7 @@ import { ReactComponent as ShoppingIcon } from '../../assets/shopping-bag.svg';
 const CartIcon = ({ toggleCartHidden }) => (
   <div className="cartIcon" onClick={toggleCartHidden}>
     <ShoppingIcon className="shoppingIcon" />
-    <span className="itemCount">0</span>
+    {1 > 0 && <span className="itemCount">1</span>}
   </div>
 );
 
