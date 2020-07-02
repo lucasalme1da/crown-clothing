@@ -17,6 +17,10 @@
     flex-direction: column;
     overflow-x: hidden;
 
+    h4 {
+      text-align: center;
+    }
+
     ::-webkit-scrollbar {
       width: 10px;
     }
