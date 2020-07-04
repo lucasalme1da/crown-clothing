@@ -21,13 +21,13 @@ const CheckoutItem = ({ cartItem, clearItem, addItem, removeItem }) => {
       <span className="price">R${price}</span>
       <div className="removeButton" onClick={() => clearItem(cartItem)}>&#10005;</div>
     </div>
-  )
+  );
 };
 
 const mapDispatchToProps = dispatch => ({
   clearItem: item => dispatch(clearItemFromCart(item)),
   addItem: item => dispatch(addItem(item)),
   removeItem: item => dispatch(removeItem(item))
-})
+});
 
 export default connect(null, mapDispatchToProps)(CheckoutItem);
