@@ -2,8 +2,6 @@ import React from 'react';
 
 import StripeCheckout from 'react-stripe-checkout';
 
-import './styles.scss'
-
 const StripeCheckoutButton = ({ price }) => {
   const priceForStripe = price * 100;
   const publishableKey = 'pk_test_51H1GOPGiPiOsjrtSjUo8uRUjuPwB0Y7cJMEEDMiMdcXgiBkcfGnYMSjtER68OLG0tZGplhuFBUeRxiyEgA93Vn2K00tOV0bKqJ';
