@@ -17,19 +17,19 @@ export const fetchCollectionFailure = error => ({
   isFetching: false,
 });
 
-export const fetchCollectionStartAsync = collectionsMap => {
-  return dispatch => {
-    const collectionRef = firestore.collection('collections');
-    dispatch(fetchCollectionStart());
+// export const fetchCollectionStartAsync = collectionsMap => {
+//   return dispatch => {
+//     const collectionRef = firestore.collection('collections');
+//     dispatch(fetchCollectionStart());
 
-    collectionRef.get()
-      .then(
-        snapshot => {
-          const collectionsMap = convertCollectionsSnapshotToMap(snapshot);
-          dispatch(fetchCollectionSuccess(collectionsMap));
-          this.setState({ loading: false });
-        }
-      )
-      .catch(error => dispatch(fetchCollectionFailure(error)));
-  }
-};
+//     collectionRef.get()
+//       .then(
+//         snapshot => {
+//           const collectionsMap = convertCollectionsSnapshotToMap(snapshot);
+//           dispatch(fetchCollectionSuccess(collectionsMap));
+//           this.setState({ loading: false });
+//         }
+//       )
+//       .catch(error => dispatch(fetchCollectionFailure(error)));
+//   }
+// };
